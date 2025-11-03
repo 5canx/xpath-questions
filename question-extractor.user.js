@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.2
 // @description  提取题库：选择题目、选项，提取所有题目和选项内容，支持导出 Excel
-// @author       You
+// @author       Scan
 // @match        *://*/*
 // @match        file://*/*
 // @grant        GM_addStyle

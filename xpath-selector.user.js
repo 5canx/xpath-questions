@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2.0
 // @description  选择元素获取 XPath，支持单个元素或两个元素智能获取相似元素 XPath
-// @author       You
+// @author       Scan
 // @match        *://*/*
 // @match        file://*/*
 // @grant        GM_addStyle
