@@ -166,6 +166,11 @@
             font-size: 13px;
             max-height: 300px;
             overflow-y: auto;
+            color: #333;
+        }
+        
+        #result-content {
+            color: #333;
         }
 
         .extractor-status {
