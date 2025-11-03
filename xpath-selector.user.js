@@ -180,6 +180,7 @@
             border-radius: 4px;
             margin-top: 12px;
             font-size: 13px;
+            color: #333;
         }
 
         .xpath-selector-result-title {
@@ -233,6 +234,7 @@
             border-radius: 4px;
             padding: 8px;
             margin-top: 8px;
+            color: #333;
         }
 
         .xpath-selector-item {
@@ -240,6 +242,7 @@
             border-bottom: 1px solid #f0f0f0;
             cursor: pointer;
             transition: background 0.2s;
+            color: #333;
         }
 
         .xpath-selector-item:hover {
