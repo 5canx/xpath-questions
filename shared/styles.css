@@ -1,0 +1,431 @@
+/**
+ * XPath 工具集 - 公共样式
+ * @version 1.0
+ * @author Scan
+ */
+
+/* ========== 基础变量 ========== */
+:root {
+    --xpath-primary: #2563eb;
+    --xpath-primary-hover: #1d4ed8;
+    --xpath-secondary: #6b7280;
+    --xpath-secondary-hover: #4b5563;
+    --xpath-success: #059669;
+    --xpath-success-bg: rgba(5, 150, 105, 0.15);
+    --xpath-danger: #dc2626;
+    --xpath-danger-hover: #b91c1c;
+    --xpath-warning: #f59e0b;
+    --xpath-bg: #ffffff;
+    --xpath-bg-secondary: #f8f9fa;
+    --xpath-bg-tertiary: #f9fafb;
+    --xpath-border: #e0e0e0;
+    --xpath-border-light: #f0f0f0;
+    --xpath-text: #333333;
+    --xpath-text-secondary: #555555;
+    --xpath-text-muted: #666666;
+    --xpath-radius: 8px;
+    --xpath-radius-sm: 4px;
+    --xpath-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --xpath-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --xpath-font-mono: 'Courier New', Consolas, monospace;
+}
+
+/* ========== 遮罩层 ========== */
+.xpath-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 999998;
+    cursor: crosshair;
+    display: none;
+    pointer-events: none;
+}
+
+/* ========== 选择模式 ========== */
+body.xpath-selecting-mode,
+body.xpath-selecting-mode * {
+    cursor: crosshair !important;
+}
+
+/* ========== 元素高亮 ========== */
+.xpath-highlight {
+    outline: 3px solid var(--xpath-primary) !important;
+    outline-offset: 2px !important;
+    background: rgba(37, 99, 235, 0.1) !important;
+}
+
+.xpath-highlight-selected {
+    outline: 3px solid var(--xpath-success) !important;
+    outline-offset: 2px !important;
+    background: var(--xpath-success-bg) !important;
+}
+
+/* ========== 面板基础 ========== */
+.xpath-panel {
+    position: fixed;
+    width: 420px;
+    background: var(--xpath-bg);
+    border-radius: var(--xpath-radius);
+    box-shadow: var(--xpath-shadow);
+    z-index: 999999;
+    font-family: var(--xpath-font);
+    font-size: 14px;
+    display: none;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.xpath-panel-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--xpath-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--xpath-bg-secondary);
+    border-radius: var(--xpath-radius) var(--xpath-radius) 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.xpath-panel-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--xpath-text);
+}
+
+.xpath-panel-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--xpath-text-muted);
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.xpath-panel-close:hover {
+    color: var(--xpath-text);
+}
+
+.xpath-panel-body {
+    padding: 16px;
+}
+
+/* ========== 区块 ========== */
+.xpath-section {
+    margin-bottom: 20px;
+}
+
+.xpath-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--xpath-text-secondary);
+    font-size: 13px;
+}
+
+/* ========== 输入框 ========== */
+.xpath-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--xpath-radius-sm);
+    font-size: 13px;
+    font-family: var(--xpath-font-mono);
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    color: var(--xpath-text);
+    background: var(--xpath-bg);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.xpath-input:focus {
+    outline: none;
+    border-color: var(--xpath-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.xpath-input[readonly] {
+    background: #f5f5f5;
+}
+
+.xpath-input-wrapper {
+    position: relative;
+}
+
+.xpath-input-wrapper .xpath-input {
+    padding-right: 35px;
+}
+
+/* ========== 按钮 ========== */
+.xpath-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--xpath-primary);
+    color: white;
+    border: none;
+    border-radius: var(--xpath-radius-sm);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: background 0.2s, transform 0.1s;
+    box-sizing: border-box;
+}
+
+.xpath-btn:hover {
+    background: var(--xpath-primary-hover);
+}
+
+.xpath-btn:active {
+    transform: scale(0.98);
+}
+
+.xpath-btn.secondary {
+    background: var(--xpath-secondary);
+}
+
+.xpath-btn.secondary:hover {
+    background: var(--xpath-secondary-hover);
+}
+
+.xpath-btn.danger {
+    background: var(--xpath-danger);
+}
+
+.xpath-btn.danger:hover {
+    background: var(--xpath-danger-hover);
+}
+
+.xpath-btn.success {
+    background: var(--xpath-success);
+}
+
+.xpath-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ========== 信息提示 ========== */
+.xpath-info {
+    padding: 12px;
+    background: #f0f9ff;
+    border-left: 3px solid var(--xpath-primary);
+    border-radius: var(--xpath-radius-sm);
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #1e40af;
+}
+
+.xpath-info.warning {
+    background: #fef3c7;
+    border-color: var(--xpath-warning);
+    color: #92400e;
+}
+
+.xpath-info.success {
+    background: #d1fae5;
+    border-color: var(--xpath-success);
+    color: #065f46;
+}
+
+.xpath-info.error {
+    background: #fef2f2;
+    border-color: var(--xpath-danger);
+    color: #991b1b;
+}
+
+/* ========== 模式指示器 ========== */
+.xpath-mode-indicator {
+    padding: 8px 12px;
+    background: #fef3c7;
+    border-left: 3px solid var(--xpath-warning);
+    border-radius: var(--xpath-radius-sm);
+    margin-bottom: 12px;
+    font-size: 12px;
+    color: #92400e;
+}
+
+/* ========== 结果区域 ========== */
+.xpath-result {
+    padding: 12px;
+    background: var(--xpath-bg-tertiary);
+    border-radius: var(--xpath-radius-sm);
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--xpath-text);
+}
+
+.xpath-result-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--xpath-text);
+}
+
+.xpath-result-count {
+    color: var(--xpath-success);
+    font-weight: 600;
+}
+
+/* ========== 列表 ========== */
+.xpath-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--xpath-border);
+    border-radius: var(--xpath-radius-sm);
+    padding: 8px;
+    margin-top: 8px;
+    color: var(--xpath-text);
+}
+
+.xpath-list-item {
+    padding: 8px;
+    border-bottom: 1px solid var(--xpath-border-light);
+    cursor: pointer;
+    transition: background 0.2s;
+    color: var(--xpath-text);
+}
+
+.xpath-list-item:hover {
+    background: #f5f5f5;
+}
+
+.xpath-list-item:last-child {
+    border-bottom: none;
+}
+
+/* ========== 代码块 ========== */
+.xpath-code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 12px;
+    border-radius: var(--xpath-radius-sm);
+    font-family: var(--xpath-font-mono);
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin-top: 8px;
+    position: relative;
+}
+
+.xpath-code-block pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* ========== 复制图标 ========== */
+.xpath-copy-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    user-select: none;
+}
+
+.xpath-copy-icon:hover {
+    opacity: 1;
+}
+
+.xpath-code-block .xpath-copy-icon {
+    top: 8px;
+    transform: none;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ========== 浮动按钮 ========== */
+.xpath-toggle-btn {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    background: var(--xpath-primary) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    font-size: 28px !important;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5) !important;
+    z-index: 2147483647 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s !important;
+    font-weight: bold !important;
+}
+
+.xpath-toggle-btn:hover {
+    transform: scale(1.15) !important;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6) !important;
+}
+
+/* ========== 选中计数 ========== */
+.xpath-selected-count {
+    display: inline-block;
+    background: var(--xpath-primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* ========== 网格布局 ========== */
+.xpath-grid {
+    display: grid;
+    gap: 8px;
+}
+
+.xpath-grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ========== 状态标签 ========== */
+.xpath-status {
+    padding: 10px;
+    background: var(--xpath-bg-tertiary);
+    border-radius: var(--xpath-radius-sm);
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.xpath-status.success {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.xpath-status.error {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+/* ========== 折叠面板 ========== */
+.xpath-collapse {
+    cursor: pointer;
+    padding: 8px;
+    background: var(--xpath-bg-tertiary);
+    border-radius: var(--xpath-radius-sm);
+    font-size: 12px;
+}
+
+.xpath-collapse summary {
+    font-weight: 500;
+    color: var(--xpath-text-muted);
+}
+
+.xpath-collapse-content {
+    margin-top: 8px;
+}
